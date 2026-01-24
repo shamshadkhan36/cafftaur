@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAFFTAUR | Products</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="plain-white"> <!-- PLAIN WHITE BACKGROUND AS REQUESTED -->
+
+    <nav class="navbar">
+        <div class="logo">CAFFTAUR</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <section class="str-product-section" style="margin-top: 80px;">
+        <div class="str-product-header">
+            <h1 class="str-page-title">PRODUCTS</h1>
+            <div class="str-category-tabs">
+                <button class="str-tab active" data-filter="all">ALL</button>
+                <button class="str-tab" data-filter="energy">ENERGY DRINK</button>
+                <button class="str-tab" data-filter="water">WATER BOTTLE</button>
+                <button class="str-tab" data-filter="other">CONFECTIONERY</button>
+            </div>
+        </div>
+
+        <div class="str-carousel-wrapper">
+            <button class="str-nav-btn prev"><i class="fas fa-chevron-left"></i></button>
+            <div class="str-carousel-container">
+                <!-- Energy Drinks -->
+                <!-- Energy Drinks -->
+                <div class="str-product-card" data-category="energy"
+                    onclick="window.location.href='products/neon-rush/index.html'">
+                    <div class="str-card-bg"></div>
+                    <img src="assets/images/prod_energy.png" alt="Neon Rush" class="str-product-img">
+                    <div class="str-product-info">
+                        <h3>Neon Rush</h3>
+                        <p>Citrus Berry</p>
+                    </div>
+                </div>
+
+                <div class="str-product-card" data-category="energy"
+                    onclick="window.location.href='products/neon-zero/index.html'">
+                    <div class="str-card-bg"></div>
+                    <img src="assets/images/prod_energy_zero.png" alt="Neon Zero" class="str-product-img">
+                    <div class="str-product-info">
+                        <h3>Neon Zero</h3>
+                        <p>Zero Sugar</p>
+                    </div>
+                </div>
+
+                <!-- Water -->
+                <div class="str-product-card" data-category="water"
+                    onclick="window.location.href='products/glacier-pure/index.html'">
+                    <div class="str-card-bg"></div>
+                    <img src="assets/images/prod_water.png" alt="Glacier Pure" class="str-product-img">
+                    <div class="str-product-info">
+                        <h3>Glacier Pure</h3>
+                        <p>Mineral Water</p>
+                    </div>
+                </div>
+
+                <!-- Other (Chocolate) -->
+                <div class="str-product-card" data-category="other"
+                    onclick="window.location.href='products/midnight-cocoa/index.html'">
+                    <div class="str-card-bg"></div>
+                    <img src="assets/images/prod_choc.png" alt="Midnight Cocoa" class="str-product-img">
+                    <div class="str-product-info">
+                        <h3>Midnight Cocoa</h3>
+                        <p>Dark Chocolate</p>
+                    </div>
+                </div>
+
+                <!-- Duplicates for filler to show carousel effect -->
+                <div class="str-product-card" data-category="energy"
+                    onclick="window.location.href='products/neon-rush/index.html'">
+                    <div class="str-card-bg"></div>
+                    <img src="assets/images/prod_energy.png" alt="Neon Rush" class="str-product-img">
+                    <div class="str-product-info">
+                        <h3>Neon Rush</h3>
+                        <p>Citrus Berry</p>
+                    </div>
+                </div>
+                <div class="str-product-card" data-category="water"
+                    onclick="window.location.href='products/glacier-pure/index.html'">
+                    <div class="str-card-bg"></div>
+                    <img src="assets/images/prod_water.png" alt="Glacier Pure" class="str-product-img">
+                    <div class="str-product-info">
+                        <h3>Glacier Pure</h3>
+                        <p>Mineral Water</p>
+                    </div>
+                </div>
+
+            </div>
+            <button class="str-nav-btn next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 CAFFTAUR. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
