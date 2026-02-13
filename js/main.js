@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             energy: 'Caffeine Free'
         },
         'cafftaur-water': {
-            title: 'Cafftaur Drinking Water',
+            title: 'Cafftaur Still Water',
             category: 'Mineral Water',
             desc: 'Sourced from the untouched heights of alpine glaciers. Experience hydration in its purest form, rich in natural minerals.',
             img: 'assets/images/cafftaur_still_water.png',
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Check if we are on the detail page
     // Check if we are on the detail page
     const detailTitle = document.getElementById('detail-title');
-    if (detailTitle) {
+    if (detailTitle && window.location.pathname.includes('product-detail.html')) {
         const params = new URLSearchParams(window.location.search);
         let productId = params.get('id');
 

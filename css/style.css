@@ -588,10 +588,13 @@ footer {
 
 .detail-container {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
     gap: 4rem;
     max-width: 1200px;
+    margin: 0 auto;
     width: 100%;
+    text-align: left;
 }
 
 .detail-image-wrapper {
@@ -639,6 +642,7 @@ footer {
 
 .detail-specs {
     display: flex;
+    justify-content: flex-start;
     margin-bottom: 3rem;
     border-top: 1px solid #eee;
     padding-top: 2rem;
@@ -685,6 +689,7 @@ footer {
     .detail-container {
         flex-direction: column;
         text-align: center;
+        align-items: center;
     }
 
     .detail-specs {

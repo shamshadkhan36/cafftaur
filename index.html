@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAFFTAUR | Refresh the Energy</title>
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -18,13 +19,13 @@
 
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="logo">CAFFTAUR&trade;</div>
+        <div class="logo"><a href="index.html">CAFFTAUR&trade;</a></div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="events.html">Events</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+
         </ul>
         <div class="hamburger">
             <i class="fas fa-bars"></i>
@@ -37,21 +38,24 @@
             <div class="spotlight-beam"></div>
             <div class="slides-container">
                 <!-- Slide 1: Water -->
-                <div class="slide active">
+                <div class="slide active" onclick="window.location.href='products/glacier-pure/index.html'"
+                    style="cursor: pointer;">
                     <img src="assets/images/cafftaur_still_water.png" alt="Cafftaur Still Water">
                     <div class="slide-caption">
                         <h2>PURE</h2>
                     </div>
                 </div>
                 <!-- Slide 2: Energy -->
-                <div class="slide">
+                <div class="slide" onclick="window.location.href='products/cafftaur_energy_drink/index.html'"
+                    style="cursor: pointer;">
                     <img src="assets/images/cafftaur_energy_drink.png" alt="cafftaur energy drink">
                     <div class="slide-caption">
                         <h2>POWER</h2>
                     </div>
                 </div>
                 <!-- Slide 3: Soda / Zero -->
-                <div class="slide">
+                <div class="slide" onclick="window.location.href='products/neon-zero/index.html'"
+                    style="cursor: pointer;">
                     <img src="assets/images/cafftaur_soda.png" alt="Cafftaur Soda">
                     <div class="slide-caption">
                         <h2>FREEDOM</h2>
