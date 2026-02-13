@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-<body class="plain-white"> <!-- PLAIN WHITE BACKGROUND AS REQUESTED -->
+<body class="watermarked">
 
     <nav class="navbar">
-        <div class="logo">CAFFTAUR</div>
+        <div class="logo">CAFFTAUR&trade;</div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
@@ -29,82 +29,50 @@
         <div class="str-product-header">
             <h1 class="str-page-title">PRODUCTS</h1>
             <div class="str-category-tabs">
-                <button class="str-tab active" data-filter="all">ALL</button>
-                <button class="str-tab" data-filter="energy">ENERGY DRINK</button>
-                <button class="str-tab" data-filter="water">WATER BOTTLE</button>
-                <button class="str-tab" data-filter="other">CONFECTIONERY</button>
+                <button class="str-tab active" data-filter="energy">ENERGY DRINK</button>
+                <button class="str-tab" data-filter="water">WATER</button>
+                <button class="str-tab" data-filter="soda">SODA</button>
             </div>
         </div>
 
         <div class="str-carousel-wrapper">
-            <button class="str-nav-btn prev"><i class="fas fa-chevron-left"></i></button>
             <div class="str-carousel-container">
                 <!-- Energy Drinks -->
                 <!-- Energy Drinks -->
-                <div class="str-product-card" data-category="energy"
-                    onclick="window.location.href='products/neon-rush/index.html'">
+                <div class="str-product-card" data-category="energy">
                     <div class="str-card-bg"></div>
-                    <img src="assets/images/prod_energy.png" alt="Neon Rush" class="str-product-img">
+                    <img src="assets/images/cafftaur_energy_drink.png" alt="cafftaur energy drink"
+                        class="str-product-img">
                     <div class="str-product-info">
-                        <h3>Neon Rush</h3>
-                        <p>Citrus Berry</p>
+                        <h3>Cafftaur Energy Drink</h3>
+                        <p>UNLEASH THE RAGE</p>
                     </div>
                 </div>
 
-                <div class="str-product-card" data-category="energy"
+                <div class="str-product-card" data-category="soda"
                     onclick="window.location.href='products/neon-zero/index.html'">
                     <div class="str-card-bg"></div>
-                    <img src="assets/images/prod_energy_zero.png" alt="Neon Zero" class="str-product-img">
+                    <img src="assets/images/cafftaur_soda.png" alt="Cafftaur Soda" class="str-product-img">
                     <div class="str-product-info">
-                        <h3>Neon Zero</h3>
-                        <p>Zero Sugar</p>
+                        <h3>Cafftaur Soda</h3>
+                        <p>Sparkling Soda</p>
                     </div>
                 </div>
 
                 <!-- Water -->
-                <div class="str-product-card" data-category="water"
-                    onclick="window.location.href='products/glacier-pure/index.html'">
+                <div class="str-product-card" data-category="water">
                     <div class="str-card-bg"></div>
-                    <img src="assets/images/prod_water.png" alt="Glacier Pure" class="str-product-img">
+                    <img src="assets/images/cafftaur_still_water.png" alt="still water" class="str-product-img">
                     <div class="str-product-info">
-                        <h3>Glacier Pure</h3>
+                        <h3>Cafftaur Drinking Water</h3>
                         <p>Mineral Water</p>
                     </div>
                 </div>
 
                 <!-- Other (Chocolate) -->
-                <div class="str-product-card" data-category="other"
-                    onclick="window.location.href='products/midnight-cocoa/index.html'">
-                    <div class="str-card-bg"></div>
-                    <img src="assets/images/prod_choc.png" alt="Midnight Cocoa" class="str-product-img">
-                    <div class="str-product-info">
-                        <h3>Midnight Cocoa</h3>
-                        <p>Dark Chocolate</p>
-                    </div>
-                </div>
 
-                <!-- Duplicates for filler to show carousel effect -->
-                <div class="str-product-card" data-category="energy"
-                    onclick="window.location.href='products/neon-rush/index.html'">
-                    <div class="str-card-bg"></div>
-                    <img src="assets/images/prod_energy.png" alt="Neon Rush" class="str-product-img">
-                    <div class="str-product-info">
-                        <h3>Neon Rush</h3>
-                        <p>Citrus Berry</p>
-                    </div>
-                </div>
-                <div class="str-product-card" data-category="water"
-                    onclick="window.location.href='products/glacier-pure/index.html'">
-                    <div class="str-card-bg"></div>
-                    <img src="assets/images/prod_water.png" alt="Glacier Pure" class="str-product-img">
-                    <div class="str-product-info">
-                        <h3>Glacier Pure</h3>
-                        <p>Mineral Water</p>
-                    </div>
-                </div>
 
             </div>
-            <button class="str-nav-btn next"><i class="fas fa-chevron-right"></i></button>
         </div>
     </section>
 

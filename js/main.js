@@ -58,6 +58,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
         });
+
+        // Trigger filter for the initially active tab
+        const activeTab = document.querySelector('.str-tab.active');
+        if (activeTab) {
+            activeTab.click();
+        }
     }
 
     // Carousel Scroll Logic
@@ -81,38 +87,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Product Detail Page Logic ---
     const productData = {
-        'neon-rush': {
-            title: 'Neon Rush',
+        'cafftaur-energy': {
+            title: 'Cafftaur Energy Drink',
             category: 'Energy Drink',
-            desc: 'Ignite your senses with the electric blend of citrus and blue raspberry. Formulated for sustained focus and unyielding power.',
-            img: 'assets/images/prod_energy.png',
+            desc: 'UNLEASH THE RAGE. Ignite your senses with the electric blend of citrus and blue raspberry. Formulated for sustained focus and unyielding power.',
+            img: 'assets/images/cafftaur_energy_drink.png',
             size: '250ml',
             energy: '160mg Caffeine'
         },
         'neon-zero': {
-            title: 'Neon Zero',
-            category: 'Energy Drink',
-            desc: 'All the power, none of the sugar. A crisp, clean taste that delivers the same high-octane performance you expect from Cafftaur.',
-            img: 'assets/images/prod_energy_zero.png',
+            title: 'Cafftaur Soda',
+            category: 'Sparkling Soda',
+            desc: 'Crisp, refreshing, and timeless. The perfect balance of bubbles and bite.',
+            img: 'assets/images/cafftaur_soda.png',
             size: '250ml',
-            energy: '160mg Caffeine'
+            energy: 'Caffeine Free'
         },
-        'glacier-pure': {
-            title: 'Glacier Pure',
+        'cafftaur-water': {
+            title: 'Cafftaur Drinking Water',
             category: 'Mineral Water',
             desc: 'Sourced from the untouched heights of alpine glaciers. Experience hydration in its purest form, rich in natural minerals.',
-            img: 'assets/images/prod_water.png',
+            img: 'assets/images/cafftaur_still_water.png',
             size: '500ml',
             energy: 'pH 7.8'
         },
-        'midnight-cocoa': {
-            title: 'Midnight Cocoa',
-            category: 'Confectionery',
-            desc: 'Indulge in the dark side. 70% premium dark chocolate infused with natural guarana for a smooth, energizing treat.',
-            img: 'assets/images/prod_choc.png',
-            size: '100g',
-            energy: 'Natural Boost'
-        }
+
     };
 
     // Check if we are on the detail page
@@ -164,6 +163,29 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('detail-title').innerText = 'Product Not Found';
             document.getElementById('detail-desc').innerText = 'Please select a valid product from the products page.';
         }
+    }
+
+
+    // --- Intro Overlay Logic ---
+    const introOverlay = document.getElementById('intro-overlay');
+    if (introOverlay) {
+        // Wait for the logo animation to finish (roughly 3s)
+        setTimeout(() => {
+            introOverlay.classList.add('hidden');
+        }, 3200);
+    }
+
+    // --- Spotlight Carousel Logic ---
+    const slides = document.querySelectorAll('.slide');
+    if (slides.length > 0) {
+        let currentSlide = 0;
+        const slideInterval = 4000; // 4 seconds per slide
+
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, slideInterval);
     }
 
 });
