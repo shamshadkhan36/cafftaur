@@ -176,16 +176,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Spotlight Carousel Logic ---
-    const slides = document.querySelectorAll('.slide');
-    if (slides.length > 0) {
-        let currentSlide = 0;
-        const slideInterval = 4000; // 4 seconds per slide
+  // --- Spotlight Carousel Logic ---
+const slides = document.querySelectorAll('.slide');
 
-        setInterval(() => {
-            slides[currentSlide].classList.remove('active');
+if (slides.length > 0) {
+    let currentSlide = 0;
+    const slideInterval = 5000; // total time per slide
+    const fadeDuration = 800;   // MUST match CSS transition time
+
+    setInterval(() => {
+        // Step 1: fade out current
+        slides[currentSlide].classList.remove('active');
+
+        // Step 2: wait for fade-out to complete
+        setTimeout(() => {
             currentSlide = (currentSlide + 1) % slides.length;
+
+            // Step 3: fade in next
             slides[currentSlide].classList.add('active');
-        }, slideInterval);
-    }
+        }, fadeDuration);
+
+    }, slideInterval);
+}
+
 
 });
