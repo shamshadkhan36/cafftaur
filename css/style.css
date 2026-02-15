@@ -283,12 +283,12 @@ section {
 }
 
 .product-card {
-    background: #fff;
+   
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    
     transition: var(--transition);
-    border: 1px solid #eee;
+   
     cursor: pointer;
 }
 
@@ -298,11 +298,11 @@ section {
 }
 
 .product-img {
-    height: 250px;
+    height: 550px;
     width: 100%;
     object-fit: contain;
     padding: 20px;
-    background: #fdfdfd;
+   
 }
 
 .product-info {
@@ -314,6 +314,28 @@ section {
     color: var(--secondary-color);
     margin-bottom: 0.5rem;
 }
+.str-product-card {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.str-card-bg {
+    display: none;
+}
+.str-product-img {
+    height: 50vh;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+.str-carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* Events Page */
 .event-card {
@@ -824,7 +846,7 @@ footer {
 }
 
 .intro-logo {
-    font-size: 4rem;
+    font-size: 12vw;
     font-weight: 900;
     /* Gold Foil Text */
     color: #BF953F;
@@ -881,19 +903,19 @@ footer {
     position: relative;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at center, #1a1a1a 0%, #000 70%);
+    /* background: radial-gradient(circle at center, #1a1a1a 0%, #000 70%); */
 }
 
 .spotlight-beam {
     position: absolute;
     top: -50%;
     left: 50%;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
     width: 150vw;
     height: 150vh;
-    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 60%);
+    /* background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 60%); */
     pointer-events: none;
-    animation: spotlightMove 8s ease-in-out infinite alternate;
+    /* animation: spotlightMove 8s ease-in-out infinite alternate; */
     z-index: 1;
     opacity: 0.6;
 }
@@ -944,7 +966,8 @@ footer {
     max-height: 75vh;
     width: auto;
     filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.5));
-    margin-bottom: 2rem;
+    margin-bottom: -2rem;
+     object-fit: contain;
 }
 
 .slide-caption h2 {
@@ -967,7 +990,7 @@ footer {
 /* Mobile Adjustments */
 @media (max-width: 768px) {
     .intro-logo {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .spotlight-beam {
@@ -1094,7 +1117,7 @@ footer {
 .brand-signature span {
     display: block;
     font-size: 1.5rem;
-    color: var(--secondary-color);
+    /* color: var(--secondary-color); */
     font-weight: 600;
     margin-top: 10px;
     letter-spacing: 2px;
@@ -1294,10 +1317,10 @@ footer {
 
 /* --- Products Page (Dark Luxury Redesign) --- */
 .str-product-section {
-    background-color: #000;
+   
     position: relative;
     /* Optional: Subtle Texture/Watermark if desired, can be added here */
-    background-image: radial-gradient(circle at 50% 50%, rgba(191, 149, 63, 0.05), transparent 70%);
+    /* background-image: radial-gradient(circle at 50% 50%, rgba(191, 149, 63, 0.05), transparent 70%); */
 }
 
 .str-page-title {
@@ -1526,5 +1549,40 @@ section {
     .section-title {
         font-size: 2.5rem;
         margin-bottom: 2rem;
+    }
+}
+@media (max-width: 768px) {
+
+    .contact-section {
+        padding: 120px 20px 60px 20px;
+    }
+
+    .contact-text-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 30px 20px;
+        border-radius: 20px;
+    }
+
+    .contact-text-content h3 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .contact-item {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .contact-item i {
+        margin-bottom: 10px;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+        text-align: center;
+        margin-bottom: 30px;
     }
 }
