@@ -58,11 +58,18 @@ a {
 
 .tm-symbol {
     font-size: 0.3em;
-    vertical-align: super;
-    border: 1px solid currentColor;
+    vertical-align: top;
+    position: relative;
+    top: -0em;
+    top: -0em;
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
     border-radius: 50%;
     padding: 1px 2px;
-    margin-left: 2px;
+    margin-left: 0px;
     display: inline-block;
     line-height: normal;
     text-align: center;
@@ -126,7 +133,8 @@ ul {
     box-shadow: var(--shadow);
     z-index: 1000;
     backdrop-filter: blur(10px);
-    border-bottom: 2px solid #BF953F;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C) 1;
 }
 
 .logo,
@@ -148,12 +156,43 @@ ul {
     /* Add spacing between links */
 }
 
+.gold-foil {
+    color: #BF953F;
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.gold-foil1 {
+    color: #BF953F;
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.bright-white {
+    /* color: #f7f3f3; */
+    /* text-shadow: 0 0 10px rgb(254, 253, 252); */
+}
+
+.bright-white .tm-symbol {
+    color: inherit;
+    text-shadow: none;
+    /* Optional: clear shadow if needed, or keep it */
+}
+
 .nav-links a {
     font-size: 1rem;
     font-weight: 500;
-    color: var(--white);
     position: relative;
     padding: 5px 0;
+    color: #BF953F;
+    /* Fallback */
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .nav-links a::after {
@@ -163,7 +202,7 @@ ul {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #BF953F;
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
     transition: var(--transition);
 }
 
@@ -173,7 +212,10 @@ ul {
 }
 
 .nav-links a.active {
-    color: #BF953F;
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .hamburger {
@@ -283,12 +325,12 @@ section {
 }
 
 .product-card {
-   
+
     border-radius: 20px;
     overflow: hidden;
-    
+
     transition: var(--transition);
-   
+
     cursor: pointer;
 }
 
@@ -302,7 +344,7 @@ section {
     width: 100%;
     object-fit: contain;
     padding: 20px;
-   
+
 }
 
 .product-info {
@@ -314,6 +356,7 @@ section {
     color: var(--secondary-color);
     margin-bottom: 0.5rem;
 }
+
 .str-product-card {
     background: transparent !important;
     box-shadow: none !important;
@@ -322,14 +365,17 @@ section {
     flex-direction: column;
     align-items: center;
 }
+
 .str-card-bg {
     display: none;
 }
+
 .str-product-img {
     height: 50vh;
     object-fit: contain;
     margin-bottom: 20px;
 }
+
 .str-carousel-container {
     display: flex;
     justify-content: center;
@@ -661,7 +707,10 @@ footer {
 
 .detail-info h1 {
     font-size: 3.5rem;
-    color: #fff;
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
     line-height: 1.1;
@@ -846,46 +895,74 @@ footer {
 }
 
 .intro-logo {
-    font-size: 12vw;
+    font-size: 14vw;
     font-weight: 900;
-    /* Gold Foil Text */
-    color: #BF953F;
-    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    background: linear-gradient(135deg,
+            #7a5c1e,
+            #d4af37,
+            #fff4b0,
+            #b8860b,
+            #7a5c1e);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 
-    letter-spacing: 5px;
-    opacity: 0;
-    animation: introFade 3s ease-in-out forwards;
-    text-transform: uppercase;
-
-    /* Gold Glow */
-    filter: drop-shadow(0 0 15px rgba(191, 149, 63, 0.6));
-    text-shadow: none;
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.7));
 }
 
-@keyframes introFade {
+/* .sparkle {
+    position: relative;
+    display: inline-block;
+
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+} */
+
+/* Rockstar Style Sharp Star */
+.sparkle::after {
+    content: "";
+    position: absolute;
+    top: -35%;
+    right: -25%;
+    width: 18px;
+    height: 18px;
+    pointer-events: none;
+
+    background:
+        linear-gradient(90deg, transparent 45%, white 50%, transparent 55%),
+        linear-gradient(0deg, transparent 45%, white 50%, transparent 55%);
+
+    filter: drop-shadow(0 0 6px #fff) drop-shadow(0 0 15px #ffd700) drop-shadow(0 0 25px #ffd700);
+
+    animation: gtaShine 2.5s ease-in-out infinite;
+}
+
+@keyframes gtaShine {
     0% {
         opacity: 0;
-        transform: scale(0.8);
+        transform: scale(0.5) rotate(0deg);
     }
 
-    30% {
+    20% {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(1.2) rotate(45deg);
     }
 
-    80% {
-        opacity: 1;
-        transform: scale(1);
+    40% {
+        opacity: 0;
+        transform: scale(0.5) rotate(90deg);
     }
 
     100% {
         opacity: 0;
-        transform: scale(1.2);
     }
 }
+
 
 /* --- Spotlight Hero --- */
 .spotlight-hero {
@@ -941,6 +1018,7 @@ footer {
     align-items: center;
     z-index: 2;
 }
+
 .slide {
     position: absolute;
     opacity: 0;
@@ -967,9 +1045,10 @@ footer {
 .slide img {
     max-height: 75vh;
     width: auto;
+    margin-top: 2rem;
     filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.5));
-    margin-bottom: -2rem;
-     object-fit: contain;
+    margin-bottom: -5rem;
+    object-fit: contain;
 }
 
 .slide-caption h2 {
@@ -1031,16 +1110,19 @@ footer {
 }
 
 .about-content p {
-    font-size: 1.2rem;
-    line-height: 1.8;
+    font-size: 1.4rem;
+    /*line-height: 1.8;
     margin-bottom: 1.5rem;
-    color: #555;
+    color: #555; */
 }
 
 .highlight-text {
     font-size: 1.5rem !important;
     font-weight: 700;
-    color: var(--primary-color) !important;
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
     text-align: center;
     margin: 2rem 0;
     text-transform: uppercase;
@@ -1056,9 +1138,12 @@ footer {
 
 .about-block h2 {
     font-size: 2rem;
-    color: #222;
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     margin-bottom: 1rem;
-    border-left: 5px solid var(--primary-color);
+    border-left: 5px solid #BF953F;
     padding-left: 15px;
     text-transform: uppercase;
 }
@@ -1079,7 +1164,10 @@ footer {
 
 .about-list li::before {
     content: '•';
-    color: var(--primary-color);
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     font-weight: bold;
     font-size: 1.5rem;
     margin-right: 10px;
@@ -1104,7 +1192,10 @@ footer {
 .brand-mindset {
     font-size: 1.5rem !important;
     font-style: italic;
-    color: #666 !important;
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
     margin-bottom: 2rem;
 }
 
@@ -1118,7 +1209,7 @@ footer {
 
 .brand-signature span {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1rem;
     /* color: var(--secondary-color); */
     font-weight: 600;
     margin-top: 10px;
@@ -1216,7 +1307,7 @@ footer {
 }
 
 .about-block p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: #ddd;
     margin-bottom: 1.5rem;
 }
@@ -1237,7 +1328,7 @@ footer {
     color: #fff;
     font-weight: 500;
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     transition: background 0.3s;
 }
 
@@ -1293,6 +1384,21 @@ footer {
     background: none;
 }
 
+.brand-signature .tm-symbol {
+    font-size: 0.15em;
+    vertical-align: top;
+    position: relative;
+    top: -0.5em;
+    display: inline;
+    /* Force inline to prevent wrapping */
+    margin-left: 5px;
+}
+
+.brand-signature {
+    white-space: nowrap;
+    /* Prevent wrapping of the main text line */
+}
+
 /* Grid Layout for Vision/Promise */
 .about-grid-row {
     display: flex;
@@ -1319,7 +1425,7 @@ footer {
 
 /* --- Products Page (Dark Luxury Redesign) --- */
 .str-product-section {
-   
+
     position: relative;
     /* Optional: Subtle Texture/Watermark if desired, can be added here */
     /* background-image: radial-gradient(circle at 50% 50%, rgba(191, 149, 63, 0.05), transparent 70%); */
@@ -1553,6 +1659,7 @@ section {
         margin-bottom: 2rem;
     }
 }
+
 @media (max-width: 768px) {
 
     .contact-section {
@@ -1587,4 +1694,78 @@ section {
         text-align: center;
         margin-bottom: 30px;
     }
+}
+
+.rage-text {
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    background: linear-gradient(90deg,
+            #b8860b,
+            #ffd700,
+            #fff8dc,
+            #ffd700,
+            #b8860b);
+
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    animation: goldShine 3s linear infinite;
+
+    text-shadow:
+        0 0 5px rgba(255, 215, 0, 0.6),
+        0 0 15px rgba(255, 215, 0, 0.5),
+        0 0 30px rgba(255, 215, 0, 0.4);
+}
+
+@keyframes goldShine {
+    to {
+        background-position: 200% center;
+    }
+}
+.gold-foil {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+   background: linear-gradient(
+    120deg,
+    #d4af37 0%,      /* gold start */
+    #ffd700 20%,     /* bright gold */
+    #fff4b0 40%,     /* shine */
+    #fff8dc 50%,     /* highlight */
+    #fff4b0 60%,     /* shine */
+    #ffd700 80%,     /* bright gold */
+    #d4af37 100%     /* gold end */
+);
+
+    background-size: 250% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: goldShineMove 4s linear infinite;
+}
+
+
+.product-features {
+    color: #ffffff !important;
+}
+
+.product-features p,
+.product-features li,
+.product-features strong {
+    color: #ffffff !important;
+}
+.performance-formula {
+    color: #ffffff !important;
+}
+
+.performance-formula h3,
+.performance-formula li {
+    color: #ffffff !important;
 }
