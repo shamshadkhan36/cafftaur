@@ -1733,16 +1733,7 @@ section {
     text-transform: uppercase;
     letter-spacing: 2px;
 
-   background: linear-gradient(
-    120deg,
-    #d4af37 0%,      /* gold start */
-    #ffd700 20%,     /* bright gold */
-    #fff4b0 40%,     /* shine */
-    #fff8dc 50%,     /* highlight */
-    #fff4b0 60%,     /* shine */
-    #ffd700 80%,     /* bright gold */
-    #d4af37 100%     /* gold end */
-);
+   background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
 
     background-size: 250% auto;
     -webkit-background-clip: text;
